@@ -226,7 +226,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, ai
     for key, value in birthdays.items():
         birth_day = get_birthday(value["birthday"], year, today)
         if birth_day == 0:
-            birthday_data = f"今天{value['name']}生日哦，祝{value['name']}生日快乐呀！"
+            birthday_data = f"{value['name']}的生日emmm。。。就是今天！，祝{value['name']}生日快乐！！！"
         else:
             birthday_data = f"{value['name']}的生日还有{birth_day}天"
         data["data"][key] = {"value": birthday_data, "color": get_color()}
