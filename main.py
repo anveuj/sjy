@@ -235,8 +235,6 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, ai
         'Content-Type': 'application/json',
         'User-Agent': get_request_headers()['User-Agent']
     }
-    for field, field_data in data["data"].items():
-        logging.info(f"Field: {field}, Color: {field_data['color']}")
     try:
         response = post(url, headers=headers, json=data)
         response.raise_for_status()
